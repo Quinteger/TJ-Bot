@@ -10,6 +10,7 @@ import org.togetherjava.tjbot.commands.help.*;
 import org.togetherjava.tjbot.commands.mathcommands.TeXCommand;
 import org.togetherjava.tjbot.commands.mathcommands.wolframalpha.WolframAlphaCommand;
 import org.togetherjava.tjbot.commands.moderation.*;
+import org.togetherjava.tjbot.commands.moderation.modmail.ModMailCommand;
 import org.togetherjava.tjbot.commands.moderation.scam.ScamBlocker;
 import org.togetherjava.tjbot.commands.moderation.scam.ScamHistoryPurgeRoutine;
 import org.togetherjava.tjbot.commands.moderation.scam.ScamHistoryStore;
@@ -112,6 +113,7 @@ public enum Features {
         features.add(new CloseCommand(helpSystemHelper));
         features.add(new ChangeHelpCategoryCommand(config, helpSystemHelper));
         features.add(new ChangeHelpTitleCommand(helpSystemHelper));
+        features.add(new ModMailCommand(config));
 
         // Mixtures
         features.add(new HelpThreadOverviewUpdater(config, helpSystemHelper));
