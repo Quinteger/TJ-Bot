@@ -19,6 +19,7 @@ public final class Config {
     private final String discordGuildInvite;
     private final String modAuditLogChannelPattern;
     private final String modMailChannelPattern;
+    private final String guildNamePattern;
     private final String mutedRolePattern;
     private final String heavyModerationRolePattern;
     private final String softModerationRolePattern;
@@ -37,6 +38,7 @@ public final class Config {
             @JsonProperty("discordGuildInvite") String discordGuildInvite,
             @JsonProperty("modAuditLogChannelPattern") String modAuditLogChannelPattern,
             @JsonProperty("modMailChannelPattern") String modMailChannelPattern,
+            @JsonProperty("guildNamePattern") String guildNamePattern,
             @JsonProperty("mutedRolePattern") String mutedRolePattern,
             @JsonProperty("heavyModerationRolePattern") String heavyModerationRolePattern,
             @JsonProperty("softModerationRolePattern") String softModerationRolePattern,
@@ -52,6 +54,7 @@ public final class Config {
         this.discordGuildInvite = discordGuildInvite;
         this.modAuditLogChannelPattern = modAuditLogChannelPattern;
         this.modMailChannelPattern = modMailChannelPattern;
+        this.guildNamePattern = guildNamePattern;
         this.mutedRolePattern = mutedRolePattern;
         this.heavyModerationRolePattern = heavyModerationRolePattern;
         this.softModerationRolePattern = softModerationRolePattern;
@@ -102,6 +105,15 @@ public final class Config {
      */
     public String getModMailChannelPattern() {
         return modMailChannelPattern;
+    }
+
+    /**
+     * Gets the REGEX pattern used to identify the name of the guild
+     *
+     * @return the guild name pattern
+     */
+    public String getGuildNamePattern() {
+        return guildNamePattern;
     }
 
     /**
